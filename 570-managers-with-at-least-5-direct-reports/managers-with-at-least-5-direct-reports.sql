@@ -7,7 +7,7 @@
 
 select a.name as name
 from employee a inner join employee b 
-on a.id = b.managerId and a.id <> b.id
+on a.id = b.managerId
 group by b.managerId
 having count(b.managerId) >= 5
 order by b.managerId;
