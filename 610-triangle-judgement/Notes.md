@@ -1,1 +1,1 @@
-<h2>triangle-judgement Notes</h2><hr>ONE LINER SOLUTION, BEATS 97
+<h2>triangle-judgement Notes</h2><hr>ONE LINER SOLUTION, BEATS 97%
