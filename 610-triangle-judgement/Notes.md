@@ -1,1 +1,1 @@
-<h2>triangle-judgement Notes</h2><hr>ONE 
+<h2>triangle-judgement Notes</h2><hr>ONE LINER 
