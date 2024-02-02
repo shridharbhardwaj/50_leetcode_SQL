@@ -1,1 +1,1 @@
-<h2>triangle-judgement Notes</h2><hr>ONE LINER 
+<h2>triangle-judgement Notes</h2><hr>ONE LINER SOLUTION, BEATS 
