@@ -1,12 +1,20 @@
 # Write your MySQL query statement below
-select distinct employee_id, department_id
+-- select distinct employee_id, department_id
+-- from employee
+-- where employee_id in (select employee_id 
+--                       from employee 
+--                       group by employee_id
+--                       having count(primary_flag) = 1 ) or
+-- primary_flag = 'Y';
+-- *********************************************************************************************
+select employee_id, department_id
+from employee 
+group by employee_id
+having count(primary_flag) = 1
+UNION      
+select employee_id, department_id
 from employee
-where employee_id in (select employee_id 
-                      from employee 
-                      group by employee_id
-                      having count(primary_flag) = 1 ) or
-primary_flag = 'Y';
-
+where primary_flag = 'Y';
 
 -- *********************************************************************************************
 -- select employee_id,
