@@ -11,22 +11,22 @@
 -- **************************************************************************
 SELECT 
     'Low Salary' AS category,
-    SUM(income < 20000) AS accounts_count
-FROM 
-    Accounts
+    count(income) as accounts_count
+FROM accounts
+where income < 20000
 
 UNION ALL
 
-    SELECT 
-        'Average Salary' AS category,
-        SUM(income BETWEEN 20000 AND 50000 ) AS accounts_count
-    FROM 
-        Accounts
+SELECT 
+    'Average Salary' AS category,
+    count(income) as accounts_count
+FROM accounts
+where income >= 20000 AND income <= 50000
 
 UNION ALL
 
-    SELECT 
-        'High Salary' AS category,
-        SUM(income > 50000) AS accounts_count
-    FROM 
-        Accounts;
+SELECT 
+    'High Salary' AS category,
+    count(income) as accounts_count
+FROM accounts
+where income > 50000;
