@@ -15,7 +15,7 @@ SELECT
 FROM 
     Accounts
 
-UNION 
+UNION ALL
 
     SELECT 
         'Average Salary' AS category,
@@ -23,7 +23,7 @@ UNION
     FROM 
         Accounts
 
-UNION
+UNION ALL
 
     SELECT 
         'High Salary' AS category,
