@@ -11,11 +11,10 @@ union all
   select results from
   (
   select title as results, avg(rating) as average_rating 
-  from movierating mr 
-  inner join movies m 
-  on mr.movie_id=m.movie_id 
+  from movierating mr inner join movies m on mr.movie_id=m.movie_id 
   where month(created_at) = 2 and year(created_at) = '2020'
   group by m.movie_id
   ) rating_group
-  order by average_rating desc, results asc limit 1
+  order by average_rating desc, results
+  limit 1
 );
